@@ -1,0 +1,11 @@
+
+<h1><center>Liste des prochaines déstinations!</center></h1>
+<center>
+<% @voyages.each do |voyage| %>
+  <p><a href="/voyages/<%= voyage.id %>"><%= voyage.title %></a></p>
+<% end %>
+<%= form_tag "/voyages", method: "post" do %>
+<input type="text" name="title" />
+<input type="submit" value="Ajouter un voyage" />
+<% end %>
+</center>

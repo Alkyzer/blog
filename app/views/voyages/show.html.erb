@@ -1,0 +1,11 @@
+<center>
+  <h1><%= @voyage.title %></h1>
+<%= form_tag "/voyages/#{@voyage.id}", method: "patch" do %>
+  <input type="text" name="title" value="<%= @voyage.title %>" />
+  <input type="submit" value="Modifier la déstination" />
+<% end %>
+<%= form_tag "/voyages/#{@voyage.id}", method: "delete" do %>
+  <input type="submit" value="Supprimer la déstination" />
+<% end %>
+<p><a href="/voyages">Retourner à la liste des déstinations</a></p>
+</center>
